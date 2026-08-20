@@ -1,4 +1,4 @@
-*{
+* {
     padding : 0 ;
     margin : 0;
 }
@@ -13,13 +13,19 @@
     src: url(Sanchez-Regular.ttf);
 }
 
+@font-face {
+    font-family: "content_font";
+    src: url(Bungee-Regular.ttf);
+}
+
 .Header_Background {
     border-top: 8vh solid #5B0101 ;
     background-image: url("20240626_102732_copet_pattern.jpg") ;
-    height : 30vh;
+    height : 28vh;
     background-size : 100% ;
-    opacity : 100% ;
     background-position-y: 80% ;
+    border-bottom : 10px solid #5B0101 ;
+    
 }
 
 h1 {
@@ -29,7 +35,6 @@ h1 {
     vertical-align : middle ;
     height : 25vh ;
     font-size : 15vh;
-    opacity : 100%;
     position: absolute;
     color : #5B0101; 
     font-family : "header_font" ;
@@ -40,11 +45,19 @@ a{
     color : #d2ae75 ;
     font-size : 3.5vh ;
     position : absolute ;
-    top : 1.6vh ;
+    padding : 1.7vh ;
     font-family : "link_font" ;
+    top : 0 ;
+    border-radius : 10px ;
+    transition : 0.5s ease ;
 }
 
-.home {
+a:hover {
+    background-color : #7e0404 ;
+    color : #d2ae75 ;
+}
+
+.h {
     left : 60px ;
 }
 
@@ -60,22 +73,69 @@ a{
     left : 480px ;
 }
 
-img[alt="home icon"] {
-    position : absolute ;
-    height : 4vh ;
-    left : -40px ;
+.leftcontent {
+    float : left ;
 }
 
 img[alt="geothermal"] {
     width : 35vw ;
     margin : 3vw ;
-    border : 10px solid #5B0101;
-    border-radius : 10px;
+    margin-bottom : 4vh ;
+    border : 0.6vw solid #5B0101;
+    border-radius : 0.6vw;
 }
 
 p{
-    width : 35vw ;
-    margin-left : 85px ;
-    margin-right : 85px;
+    width : 36vw ;
+    margin-left : 3vw ;
     text-align : justify;
+    font-size : 2.5vh ;
+    font-family : "content_font" ;
+    color : #5B0101 ;
 }
+
+.container img {
+    transition : 0.5s ease ;
+    opacity : 1 ;
+    width : 15vw ;
+    height : 75vh ;
+    overflow : hidden ;
+    object-fit : cover ;
+    border-radius : 0.6vw ;
+    border : 0.6vw solid #5B0101 ;
+}
+
+.grid {
+    display : grid ;
+    grid-template-columns : 1fr 1fr 1fr ;
+    margin-top : 3vw ;
+}
+
+.container {
+    position : relative ;
+    width : 15vw ;
+    display : flex ;
+    height : 75vh ;
+    justify-content : center ;
+    vertical-align : middle ;
+    float : center ;
+}
+
+.container:hover img{
+    opacity : 50% ;
+}
+
+.overlay {
+    transition : 0.5s ease ;
+    opacity: 0;
+    color :#5B0101;
+    background-color : #d2ae75;
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+ .container:hover .overlay {
+    opacity : 1;
+ }
