@@ -1,8 +1,13 @@
+/* 
+   This css sets the padding and margin of everything to 0 
+   so the header is flush to the side of the page.
+*/
 * {
     padding : 0 ;
     margin : 0;
 }
 
+/* This css creates three different font-familys for the site. */
 @font-face {
     font-family: "header_font" ;
     src: url(LINESeedJP-Bold.ttf);
@@ -18,8 +23,9 @@
     src: url(Bungee-Regular.ttf);
 }
 
+/* This css sets the background and size of the header. */
 .Header_Background {
-    border-top: 8vh solid #5B0101 ;
+    border-top: 7vh solid #5B0101 ;
     background-image: url("20240626_102732_copet_pattern.jpg") ;
     height : 28vh;
     background-size : 100% ;
@@ -28,6 +34,7 @@
     
 }
 
+/* This css sets the position, size and style for the header text. */
 h1 {
     text-align: center;
     top : 14vh ;
@@ -40,10 +47,14 @@ h1 {
     font-family : "header_font" ;
 } 
 
+/* 
+    This css sets the style and size for all the links and how they change when 
+    they are hovered over.
+*/
 a{
     text-decoration : none ;
     color : #d2ae75 ;
-    font-size : 3.5vh ;
+    font-size : 2.5vh ;
     position : absolute ;
     padding : 1.7vh ;
     font-family : "link_font" ;
@@ -57,6 +68,7 @@ a:hover {
     color : #d2ae75 ;
 }
 
+/* This css sets the positions for the links at the top of the header. */
 .home {
     left : 10px ;
 }
@@ -73,10 +85,12 @@ a:hover {
     left : 410px ;
 }
 
+/* This css floats the left content to the left of the page. */
 .leftcontent {
     float : left ;
 }
 
+/* This css sets the size, border, and position of the left image on the first page. */
 img[alt="geothermal"] {
     width : 35vw ;
     margin : 3vw ;
@@ -85,6 +99,7 @@ img[alt="geothermal"] {
     border-radius : 0.6vw;
 }
 
+/* This css sets the size, font and position of the paragraph on the first page. */
 .leftcontent p{
     width : 36vw ;
     margin-left : 3vw ;
@@ -93,6 +108,7 @@ img[alt="geothermal"] {
     font-family : "content_font" ;
     color : #5B0101 ;
 }
+
 
 .container img {
     transition : 0.5s ease ;
@@ -137,11 +153,12 @@ img[alt="geothermal"] {
     left: 50%;
     transform: translate(-50%, -50%);
 }
- .container:hover .overlay {
+
+.container:hover .overlay {
     opacity : 1;
 }
 
-.main {
+.thearea_grid{
     display : grid ;
     max-width : 100vw ;
     justify-items : center ;
@@ -155,7 +172,7 @@ img[alt="geothermal"] {
     margin-bottom : 2vw
 }
 
-.main img {
+.thearea_grid img {
     object-fit : cover ;
     border-radius : 0.6vw ;
     border : 0.6vw solid #5B0101 ;
@@ -163,10 +180,11 @@ img[alt="geothermal"] {
 
 }
 
-.main p {
-    font-size : 0.85vw ;
-    font-family : "content_font" ;
+.thearea_grid p {
+    font-size : 0.7vw ;
+    font-family : "link_font" ;
     color : #5B0101 ;
+    font-weight : bold ;
 }
 
 .textbox {
@@ -180,4 +198,20 @@ h2 {
     font-family : "content_font" ;
     color : #5B0101 ;
     text-align : center ;
+}
+
+.experiences_grid {
+    display : grid ;
+    grid-template-areas: 25vw 25vw 25vw 25vw ;
+    max-width: 100vw;
+}
+
+.box {
+    width : 25vw ;
+    height : 600px ;
+}
+
+.box img {
+    object-fit: cover ;
+    
 }
