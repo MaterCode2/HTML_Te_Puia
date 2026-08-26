@@ -121,7 +121,7 @@ img[alt="geothermal"] {
     border : 0.6vw solid #5B0101 ;
 }
 
-.grid {
+.te_puia_grid {
     display : grid ;
     grid-template-columns : 1fr 1fr 1fr ;
     margin-top : 3vw ;
@@ -189,6 +189,7 @@ img[alt="geothermal"] {
     max-height : 410px;
     font-size: 80% ;
     position : static ;
+    margin-bottom : 1.5vw ;
 }
 
 .textbox {
@@ -209,12 +210,12 @@ h2 {
     display : grid ;
     grid-template-columns: auto auto auto auto;
     margin : 2vw ;
+    margin-bottom: 0;
 }
 
 .experiences_grid p {
     width : 22vw ;
-    height : auto;
-    font-size : 85% ;
+    font-size : 90% ;
     font-family : "link_font" ;
     color : #5B0101 ;
     font-weight : bold ;
@@ -228,7 +229,7 @@ h2 {
     object-fit: cover ;
     overflow : hidden ;
     width : 20vw ;
-    height : 20vh ;
+    height : 30vh ;
     align-items : center  ;
     margin-bottom : 1.5vw ;
     border-radius : 0.6vw ;
@@ -238,11 +239,11 @@ h2 {
 .carving_weaving_grid {
     display : grid ;
     grid-template-columns: auto auto;
-    margin : 3vw ;
+    margin : 4vw ;
 }
 
 .carving_weaving_grid img {
-    width : 40vw ;
+    width : 43vw ;
     height : 300px;
     object-fit: cover ;
     overflow : hidden ;
@@ -252,7 +253,7 @@ h2 {
 }
 
 .carving_weaving_grid p{
-    width : 40vw ;
+    width : 43vw ;
     height : 300px;
     font-size : 90% ;
     font-family : "link_font" ;
@@ -262,15 +263,19 @@ h2 {
     align-items: center ;
 }
 
+.carving_weaving_grid.textbox {
+    width : 43vw ;
+}
+
 footer {
     width : 100% ;
     background-color : #5B0101 ;
     text-align : center ;
-    padding-top : 5px;
-    padding-bottom : 5px;
+    padding-top : 10px;
+    padding-bottom : 10px;
     color :#d2ae75 ;
     font-family: "link_font" ;
-    font-size: 10px;
+    font-size: 15px;
     bottom : 0px; 
     position : relative ;
 }
