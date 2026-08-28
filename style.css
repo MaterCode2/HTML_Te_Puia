@@ -7,6 +7,11 @@
     margin : 0;
 }
 
+/*This css sets the background color of each page*/
+body {
+    background-color : #d8c8b3 ;
+}
+
 /* This css creates three different font-familys for the site. */
 @font-face {
     font-family: "header_font" ;
@@ -68,6 +73,7 @@ a:hover {
     color : #d2ae75 ;
 }
 
+
 /* This css sets the positions for the links at the top of the header. */
 .home {
     left : 10px ;
@@ -93,10 +99,12 @@ a:hover {
 /* This css sets the size, border, and position of the left image on the first page. */
 img[alt="geothermal"] {
     width : 35vw ;
+    height : 35vh ;
     margin : 3vw ;
     margin-bottom : 4vh ;
     border : 0.6vw solid #5B0101;
     border-radius : 0.6vw;
+    object-fit: cover;
 }
 
 /* This css sets the size, font and position of the paragraph on the first page. */
@@ -109,7 +117,7 @@ img[alt="geothermal"] {
     color : #5B0101 ;
 }
 
-
+/* This css sets the sizing and border of the images on the home page. */
 .container img {
     transition : 0.5s ease ;
     opacity : 1 ;
@@ -121,6 +129,7 @@ img[alt="geothermal"] {
     border : 0.6vw solid #5B0101 ;
 }
 
+/* This css sets the columns and spacing for the home page. */
 .te_puia_grid {
     display : grid ;
     grid-template-columns : 1fr 1fr 1fr ;
@@ -128,6 +137,7 @@ img[alt="geothermal"] {
     margin-bottom : 3vw ;
 }
 
+/* This css sets the positioning and sizing for the containers on the home page. */
 .container {
     position : relative ;
     width : 15vw ;
@@ -135,13 +145,14 @@ img[alt="geothermal"] {
     height : 75vh ;
     justify-content : center ;
     vertical-align : middle ;
-    float : center ;
 }
 
+/* This css changes the opacity of the images on the home page when hovered over. */
 .container:hover img{
     opacity : 50% ;
 }
 
+/* This css sets the sizing and color of the text link on the images */
 .overlay {
     transition : 0.5s ease ;
     opacity: 0;
@@ -154,58 +165,64 @@ img[alt="geothermal"] {
     transform: translate(-50%, -50%);
 }
 
+/* This css changes the opacity of the text links when the image is hovered over. */
 .container:hover .overlay {
     opacity : 1;
 }
 
+/* This css sets the grid spacing for the layout of The Area page. */
 .thearea_grid{
     display : grid;
     max-width : 100vw ;
     justify-items : center ;
     grid-template-columns: 1fr 1fr 1fr ;
     padding : 2vw ; 
+    gap : 2vw
 }
 
+/* This css sets the size of each box on The Area page. */
 .grids {
     width : 29vw ;
     height : 420px;
-    margin-bottom : 2vw ;
-    position : static ;
 }
 
+/* This css sets the border and fit of the images on The Area page. */
 .thearea_grid img {
     object-fit : cover ;
     border-radius : 0.6vw ;
     border : 0.6vw solid #5B0101 ;
     overflow : hidden ;
-    position : static ;
 }
 
+/* This css changes the font and sizing of the text on The Area page. */
 .thearea_grid p {
-    font-size : 80% ;
     font-family : "link_font" ;
     color : #5B0101 ;
     font-weight : bold ;
     max-height : 410px;
     font-size: 80% ;
-    position : static ;
-    margin-bottom : 1.5vw ;
+    margin-bottom: 1.5vw;
 }
 
-.textbox {
+/* This css sets the size of the textbox on The Area page. */
+.thearea_grid.textbox {
     width : 29vw ;
     height : 400px ;
     text-align : justify ;
-    position : static ;
 }
 
-h2 {
+/* This css sets the font, size and color of heading2 for all pages except for in the footer. */
+h2:not(.footer) {
     font-size : 3vh ;
     font-family : "content_font" ;
     color : #5B0101 ;
     text-align : center ;
 }
 
+/* 
+    This css sets the size of the grid on the Experiences page and changes the text 
+    and image sizing and color styles for inside the grid.
+*/
 .experiences_grid {
     display : grid ;
     grid-template-columns: auto auto auto auto;
@@ -236,15 +253,25 @@ h2 {
     border : 0.6vw solid #5B0101 ;
 }
 
+/* 
+    This css sets the grid for the Carving and Weaving page and sets the size and 
+    color of the images and text for inside the grid. 
+*/
+.carving_weaving_grid.box {
+    margin : 3vw ;
+    height : 70vh ;
+}
+
 .carving_weaving_grid {
     display : grid ;
     grid-template-columns: auto auto;
-    margin : 4vw ;
+    margin : 3vw ;
+    gap : 3vw ;
 }
 
 .carving_weaving_grid img {
     width : 43vw ;
-    height : 300px;
+    height : 70vh;
     object-fit: cover ;
     overflow : hidden ;
     margin-bottom : 1.5vw ;
@@ -254,19 +281,28 @@ h2 {
 
 .carving_weaving_grid p{
     width : 43vw ;
-    height : 300px;
     font-size : 90% ;
     font-family : "link_font" ;
     color : #5B0101 ;
     font-weight : bold ;
     text-align : justify ;
     align-items: center ;
+    margin-left : 0.6vw ;
+    margin-bottom : 1.5vw ;
 }
 
+/* This css sets the size and alignment of the text box's on the Carving_Weaving page. */
 .carving_weaving_grid.textbox {
     width : 43vw ;
+    height : 300px;
+    color : #5B0101 ;
+    font-weight : bold ;
+    text-align : justify ;
+    align-items: center ;
+    vertical-align: middle;
 }
 
+/* This css sets the positioning, size and color of the footer on all the pages. */
 footer {
     width : 100% ;
     background-color : #5B0101 ;
@@ -278,4 +314,8 @@ footer {
     font-size: 15px;
     bottom : 0px; 
     position : relative ;
+}
+
+footer h2 {
+    font-size: 15px;
 }
